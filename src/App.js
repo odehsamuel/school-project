@@ -1,7 +1,12 @@
-// import SchoolLogo from "./components/ui/logo";
+import Home from "./Home";
+import Students from "./Students";
 
 function App() {
-  return <h1><span>logo</span>Welcome to the school app.</h1>;
+  return (
+    <>
+      <Home>{<Students />}</Home>
+    </>
+  );
 }
 
 export default App;

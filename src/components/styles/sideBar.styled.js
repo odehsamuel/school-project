@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SideBarMenu = styled.div`
-  position: relative;
   height: 100vh;
   padding: 4px auto;
   width: 100%;
@@ -10,16 +9,13 @@ export const SideBarMenu = styled.div`
 `;
 
 export const Header = styled.header`
-  position: relative;
+  position: fixed;
   margin: 0;
   height: 2rem;
   display: flex;
   justify-content: center;
-
-  /* width: 50%;
-  /* top: 50%; */
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  top: 1rem;
+  left: 8%;
 
   span {
     color: #303131;
@@ -29,35 +25,28 @@ export const Header = styled.header`
   }
 `;
 
-// export const Dashboard = styled.div`
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-
-//   & .dashboard {
-//     display: flex;
-//     /* align-self: center;
-//     justify-self: center; */
-//   }
-
-//   span {
-//     border-radius: 100%;
-//     padding: 2px 8px;
-//     background-color: #31c7c0;
-//     color: #b3e2e0;
-//   }
-// `;
-
 export const SideBarNav = styled.ul`
   padding: 0;
-  margin: 0 auto;
+  margin: 4rem auto;
   li {
     display: flex;
     list-style: none;
-    padding: 1rem 1rem;
-    margin: 0 1.5rem;
-    border-radius: 8px;
+    padding: 0.25rem 0.75rem;
+    /* margin: 0 1.25rem; */
+    border-radius: 10px;
     color: #9e9e9e;
+    justify-content: space-between;
+
+    & .dashboard {
+      display: flex;
+      align-items: center;
+
+      & .notify {
+        background-color: rgb(255, 46, 46);
+        padding: 0.1rem 0.4rem;
+        border-radius: 100%;
+      }
+    }
 
     &:hover {
       background-color: #eaf7f7;
@@ -67,11 +56,11 @@ export const SideBarNav = styled.ul`
 `;
 
 export const Profile = styled.div`
+  width: 10rem;
   position: fixed;
   bottom: 0;
   margin: 0 12px;
   padding: 1rem 2rem;
   background-color: #eaf7f7;
   border-radius: 10px 10px 0 0;
-  border: 1px solid transparent;
 `;

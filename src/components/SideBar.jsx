@@ -1,13 +1,22 @@
 import logo from "../images/schLogo.png";
-import { FaChevronRight, FaThLarge, FaUserCircle } from "react-icons/fa";
+import {
+  FaChevronRight,
+  FaComment,
+  FaThLarge,
+  FaUserCircle,
+} from "react-icons/fa";
 import {
   SideBarMenu,
   Header,
   Profile,
   SideBarNav,
 } from "./styles/sideBar.styled";
+import { FaUserGroup } from "react-icons/fa6";
+import { useState } from "react";
 
 function SideBar() {
+  const [notification, setNotification] = useState(false);
+
   const navContents = [
     {
       logo: <FaThLarge />,
@@ -15,7 +24,7 @@ function SideBar() {
       notification: 3,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaUserGroup />,
       name: "Students",
       notification: 2,
     },
@@ -30,7 +39,7 @@ function SideBar() {
       notification: 0,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaComment />,
       name: "SMS",
       notification: 2,
     },
@@ -52,28 +61,21 @@ function SideBar() {
         <img src={logo} alt="school logo" />
         <span>Edmate</span>
       </Header>
-      {/* <Dashboard>
-      </Dashboard> */}
       <SideBarNav>
         {navContents.map((navContent, index) => (
           <li key={index}>
             <div className="dashboard">
-              {navContent.logo}
+              <span>{navContent.logo}</span>
               <p>{navContent.name}</p>
             </div>
             <div className="dashboard">
-              <span>{navContent.notification}</span>
+              {notification && (
+                <span className="notify">{navContent.notification}</span>
+              )}
               <FaChevronRight />
             </div>
           </li>
         ))}
-
-        {/* <li>Students</li>
-        <li>Academics</li>
-        <li>Calendar</li>
-        <li>SMS</li>
-        <li>HR</li>
-        <li>Finance</li> */}
       </SideBarNav>
       <Profile>
         <span></span>
@@ -82,8 +84,6 @@ function SideBar() {
           <FaUserCircle />
           SignUp Now
         </div>
-        {/* <Link>
-          </Link> */}
       </Profile>
     </SideBarMenu>
   );

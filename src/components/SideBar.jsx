@@ -1,9 +1,13 @@
 import logo from "../images/schLogo.png";
 import {
+  FaCalendarAlt,
   FaChevronRight,
   FaComment,
+  FaCreditCard,
+  FaGraduationCap,
   FaThLarge,
   FaUserCircle,
+  FaUserMd,
 } from "react-icons/fa";
 import {
   SideBarMenu,
@@ -11,11 +15,11 @@ import {
   Profile,
   SideBarNav,
 } from "./styles/sideBar.styled";
-import { FaUserGroup } from "react-icons/fa6";
 import { useState } from "react";
+import { FaUserGroup } from "react-icons/fa6";
 
 function SideBar() {
-  const [notification, setNotification] = useState(false);
+  const [notification, setNotification] = useState(true);
 
   const navContents = [
     {
@@ -29,12 +33,12 @@ function SideBar() {
       notification: 2,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaGraduationCap />,
       name: "Academics",
       notification: 3,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaCalendarAlt />,
       name: "Calendar",
       notification: 0,
     },
@@ -44,12 +48,12 @@ function SideBar() {
       notification: 2,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaUserMd />,
       name: "Human Resource",
       notification: 4,
     },
     {
-      logo: <FaThLarge />,
+      logo: <FaCreditCard />,
       name: "Finance",
       notification: 5,
     },

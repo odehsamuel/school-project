@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const HomeStyled = styled.div`
-  /* padding: 0;
-  margin: 0; */
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 251px 1fr;
@@ -10,7 +8,6 @@ export const HomeStyled = styled.div`
 
   font-family: "Quicksand", serif;
   font-optical-sizing: auto;
-  /* font-weight: 600; */
   font-style: normal;
 `;
 
@@ -27,6 +24,26 @@ export const HomeNav = styled.div`
   & .searchArea {
     display: flex;
     align-items: center;
+
+    & .notification-container {
+      position: relative;
+      & .notification-bell {
+        padding: 0.45rem;
+        border: 1px solid #c3e7e5;
+        border-radius: 100%;
+        color: #72cbc6;
+        margin: 0 1rem;
+      }
+      span {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        border-radius: 100%;
+        top: 0.45rem;
+        left: 2.05rem;
+      }
+    }
   }
 `;
 
@@ -49,8 +66,8 @@ export const StudentsHeader = styled.div`
 export const UserPix = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid #949898;
-  padding: 0.35rem 1rem;
+  border: 2px solid #c9eae9;
+  padding: 0.35rem 0.25rem;
   border-radius: 10rem;
   img {
     width: 2.5rem;
@@ -76,8 +93,14 @@ export const UserPix = styled.div`
     }
   }
   & .dropdown {
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
     color: #303d3c;
+    padding: 0.45rem;
+
+    &:hover {
+      border-radius: 100%;
+      background-color: #c3e7e5;
+    }
   }
 `;
 
@@ -86,7 +109,6 @@ export const InputStyle = styled.div`
   input {
     border-radius: 18px;
     padding: 0.35rem 1rem;
-    margin-right: 1rem;
     color: #303d3c;
     font-size: 1rem;
   }

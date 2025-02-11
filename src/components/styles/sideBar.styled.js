@@ -42,8 +42,11 @@ export const SideBarNav = styled.ul`
       align-items: center;
 
       & .notify {
-        background-color: rgb(255, 46, 46);
-        padding: 0.1rem 0.4rem;
+        background-color: #72cbc6;
+        width: 8px;
+        height: 8px;
+        font-size: smaller;
+        padding: 0.4rem;
         border-radius: 100%;
       }
     }

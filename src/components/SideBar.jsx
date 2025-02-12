@@ -1,4 +1,3 @@
-import logo from "../images/schLogo.png";
 import {
   FaCalendarAlt,
   FaChevronRight,
@@ -19,7 +18,7 @@ import { useState } from "react";
 import { FaUserGroup } from "react-icons/fa6";
 
 function SideBar() {
-  const [notification, setNotification] = useState(true);
+  const [notification, setNotification] = useState(false);
 
   const navContents = [
     {
@@ -40,12 +39,12 @@ function SideBar() {
     {
       logo: <FaCalendarAlt />,
       name: "Calendar",
-      notification: 0,
+      notification: 2,
     },
     {
       logo: <FaComment />,
       name: "SMS",
-      notification: 2,
+      notification: 19,
     },
     {
       logo: <FaUserMd />,
@@ -62,8 +61,8 @@ function SideBar() {
   return (
     <SideBarMenu>
       <Header>
-        <img src={logo} alt="school logo" />
-        <span>Edmate</span>
+        <img src="/schLogo.png" alt="school logo" />
+        <span >Edmate</span>
       </Header>
       <SideBarNav>
         {navContents.map((navContent, index) => (
